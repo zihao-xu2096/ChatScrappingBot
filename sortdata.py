@@ -79,8 +79,10 @@ one = yes.initializeUserMsg()
 two = yes.initializeUsers()
 top_words = frequent_word(yes, 10)
 values = []
+labels = []
 for word in top_words:
     values.append(top_words[word])
+    labels.append(word)
 testing = np.array(values)
 plt.pie(testing)
 plt.show()

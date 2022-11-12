@@ -1,6 +1,6 @@
-import json
 import string
-
+import matplotlib.pyplot as plt
+import numpy as np
 from User import User, UserMessage
 from chatdata import InitializeChatDownloader
 from typing import List, Dict
@@ -71,9 +71,16 @@ def frequent_word(data: InitializeChatDownloader, n: int) -> Dict[str, int]:
 
     return top_words
 
-yes = InitializeChatDownloader("https://www.twitch.tv/subroza/clip/ChillyAmericanAmazonMau5-5ECUjkvRhx3RarKr?filter=clips&range=7d&sort=time")
+
+
+yes = InitializeChatDownloader("https://www.twitch.tv/esl_csgo/clip/FunClumsyCobraYouDontSay-zu9ggeIuHedI0b6X?filter=clips&range=7d&sort=time")
 
 one = yes.initializeUserMsg()
 two = yes.initializeUsers()
-
-print(frequent_word(yes, 10))
+top_words = frequent_word(yes, 10)
+values = []
+for word in top_words:
+    values.append(top_words[word])
+testing = np.array(values)
+plt.pie(testing)
+plt.show()

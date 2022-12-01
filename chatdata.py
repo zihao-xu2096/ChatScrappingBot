@@ -1,5 +1,5 @@
 import json
-from User import User ,UserMessage
+from User import User, UserMessage
 from typing import List, Dict
 from chat_downloader import ChatDownloader
 from logging.config import dictConfig
@@ -58,8 +58,8 @@ class InitializeChatDownloader:
         return self._usermsg
 
 
-
-yes = InitializeChatDownloader("https://www.twitch.tv/subroza/clip/ChillyAmericanAmazonMau5-5ECUjkvRhx3RarKr?filter=clips&range=7d&sort=time")
+yes = InitializeChatDownloader(
+    "https://www.twitch.tv/subroza/clip/ChillyAmericanAmazonMau5-5ECUjkvRhx3RarKr?filter=clips&range=7d&sort=time")
 
 one = yes.initializeUserMsg()
 two = yes.initializeUsers()

@@ -5,9 +5,9 @@ app = Flask(__name__)
 # Members API Route
 
 
-@app.route("/members")
+@app.route("/members", methods=['GET'])
 def members():
-    return {"Members": ["Member 1", "Member 2"]}
+    return {"members": ["Member1", "Member2", "Member3"]}
 
 
 if __name__ == "__main__":

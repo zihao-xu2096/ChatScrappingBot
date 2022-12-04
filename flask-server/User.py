@@ -27,6 +27,7 @@ class User:
     def get_messageids(self) -> list:
         return self._messageids
 
+
 class UserMessage:
     """
     A livestream viewer with private attributes message and name
@@ -67,4 +68,3 @@ class UserMessage:
 
     def get_messageid(self) -> str:
         return str(self._message_id)
-

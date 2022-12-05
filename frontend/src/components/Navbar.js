@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 export default function NavbarComp() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar className="nav" bg="dark" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand href="#home">LiveStream Chat Analytics</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

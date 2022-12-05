@@ -1,26 +1,23 @@
-import React, {useState, useEffect} from 'react';
-// Usestate create state variable containing data retrived from the backend
-// useEffect fetches backend api on first render
-function App() {
-  
-  const [data, setData] = useState([{}]) // Data is actual variable, setData is a function that manipulates Data variable
-  
-  useEffect(() => {
-    fetch("/members").then(
-      response => response.json()
-    ).then(
-      data => {
-        setData(data)
-        console.log(data)
-      }
-    )
-  }, []);
+import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css"
+import NavbarComp from './components/Navbar';
+import MainVideo from './components/MainVideo';
+import Footer from './components/Footer';
 
-  return(
-    <div>
-        {(data.members)}
+function App() {
+  return (
+    <div className='App'>
+      <NavbarComp></NavbarComp>
+      <MainVideo></MainVideo>
+      <body>
+        <div className='About-Section'>
+          <h2> How does it work?</h2>
+        </div>
+      </body>
+      <Footer></Footer>
     </div>
 
-  )}
+  );
+}
 
-export default App
+export default App;

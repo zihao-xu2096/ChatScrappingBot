@@ -1,0 +1,22 @@
+function App() {
+  
+  const [data, setData] = useState([{}]) // Data is actual variable, setData is a function that manipulates Data variable
+  
+  useEffect(() => {
+    fetch("/members").then(
+      response => response.json()
+    ).then(
+      data => {
+        setData(data)
+        console.log(data)
+      }
+    )
+  }, []);
+
+  return(
+    <div className='App'>
+    </div>
+
+  )}
+
+export default App

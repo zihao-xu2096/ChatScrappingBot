@@ -48,7 +48,6 @@ h2 {
   z-index: 1;
 }
 
-.About-Section h3{
-  align-items: center;
-  display: flex;
+.About-header {
+  text-align: center;
 }

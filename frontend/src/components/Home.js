@@ -33,9 +33,7 @@ export default function Home() {
             <video className='twitchvid' src={videoBg} autoPlay loop muted playsInline></video>
         </div>
         <h2 className='hero'> Get live chat informatics from vods and clips from:  <span ref={el}></span> </h2>
-        <div className='About'>
-            <h3 className='About-Header'> How does it work?</h3>
-        </div>
+
     </body>
     )
 }

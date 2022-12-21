@@ -1,0 +1,14 @@
+.About{
+    position: inherit;
+    align-items: center;
+    background-color: grey;
+}
+
+.About-header {
+    position: relative;
+    text-align: center;
+  }
+
+.h3 {
+    text-align: center;
+}

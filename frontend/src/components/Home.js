@@ -1,6 +1,7 @@
 import React from 'react';
 import videoBg from '../assets/twitchchat.mp4'
 import Typed from 'typed.js'
+import About from './About'
 export default function Home() {
 
     const el = React.useRef(null);
@@ -33,7 +34,7 @@ export default function Home() {
             <video className='twitchvid' src={videoBg} autoPlay loop muted playsInline></video>
         </div>
         <h2 className='hero'> Get live chat informatics from vods and clips from:  <span ref={el}></span> </h2>
-
+        <About></About>
     </body>
     )
 }

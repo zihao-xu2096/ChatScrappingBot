@@ -16,6 +16,8 @@ export default function NavbarComp() {
           <Nav className="me-auto">
             <Nav.Link to="/">Home</Nav.Link>
             <Nav.Link to="/about">About</Nav.Link>
+            <Nav.Link to="/contact-us">Contact Us</Nav.Link>
+            <Nav.Link to="/FAQ">FAQ</Nav.Link>
             <NavDropdown title="Platforms" id="basic-nav-dropdown">
               <NavDropdown.Item to="#action/3.1">Twitch</NavDropdown.Item>
               <NavDropdown.Item to="#action/3.2">

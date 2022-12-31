@@ -1,10 +1,9 @@
 import React from 'react'
+import './css-styles/Footer.css'
 
 export default function Footer() {
   return (
-    <footer>
-    <div className="wrapper"></div>
-    <div className="footer">
+    <section className="footer-section">
       <div className="footer-content">
           <p className="footer-author">
             Developer: <span className="my-name"> Zihao(Harry) Xu</span>
@@ -35,9 +34,7 @@ export default function Footer() {
           <p className="copyright">
             Copyright&nbsp;&copy;&nbsp;LiveStream Chat Analytics
           </p>
-          <br />
-        </div>
       </div>
-  </footer>
+    </section>
   )
 }

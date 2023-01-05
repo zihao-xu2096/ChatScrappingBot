@@ -1,0 +1,8 @@
+1.  Error with HTTP Post Request from React to Flask
+2.  Flask-server folder hierarchy
+    -- flask-server
+        controllers/
+            abstract
+            
+        twitch
+        youtube

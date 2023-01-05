@@ -7,6 +7,7 @@ import About from './components/About';
 import {Routes, Route} from 'react-router-dom';
 import Routers from './Router';
 function App() {
+
   return (
     <div className='App'>
       <NavbarComp></NavbarComp>

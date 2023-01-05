@@ -29,12 +29,12 @@ export default function Home() {
     }
     }, [])
     return (
-    <body>
-        <div className='mainvideo'>
-            <video className='twitchvid' src={videoBg} autoPlay loop muted playsInline></video>
+        <div>
+            <div className='mainvideo'>
+                <video className='twitchvid' src={videoBg} autoPlay loop muted playsInline></video>
+            </div>
+            <h2 className='hero'> Get live chat informatics from vods and clips from:  <span ref={el}></span> </h2>
+            <About></About>
         </div>
-        <h2 className='hero'> Get live chat informatics from vods and clips from:  <span ref={el}></span> </h2>
-        <About></About>
-    </body>
     )
 }

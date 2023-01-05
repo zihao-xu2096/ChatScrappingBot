@@ -6,7 +6,7 @@ function TwitchStatus(){
     const isLoggedIn = false;
     
     return (
-        <div classname="Twitch-Page">
+        <div className="Twitch-Page">
             {isLoggedIn ? (<TwitchLoggedIn/>): (<TwitchLoggedOut />)}
         </div>
 

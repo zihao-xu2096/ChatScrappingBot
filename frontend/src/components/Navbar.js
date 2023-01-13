@@ -14,20 +14,16 @@ export default function NavbarComp() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link to="/">Home</Nav.Link>
-            <Nav.Link to="/about">About</Nav.Link>
-            <Nav.Link to="/contact-us">Contact Us</Nav.Link>
-            <Nav.Link to="/FAQ">FAQ</Nav.Link>
+            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/about">About</Link>
+            <Link className="nav-link" to="/contact-us">Contact Us</Link>
+            <Link className="nav-link" to="/FAQ">FAQ</Link>
             <NavDropdown title="Platforms" id="basic-nav-dropdown">
-              <NavDropdown.Item to="#action/3.1">Twitch</NavDropdown.Item>
-              <NavDropdown.Item to="#action/3.2">
-                Youtube
-              </NavDropdown.Item>
+              <Link className="dropdown-item" to="/twitch">Twitch</Link>
+              <NavDropdown.Item to="#action/3.2">Youtube</NavDropdown.Item>
               <NavDropdown.Item to="#action/3.3">Facebook</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item to="#action/3.4">
-                Separate Link
-              </NavDropdown.Item>
+              <NavDropdown.Item to="#action/3.4">Separate Link</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

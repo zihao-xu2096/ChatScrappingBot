@@ -7,7 +7,7 @@ import TwitchStatus from "./components/TwitchStatus";
 function Routers() {
     return (
     <Routes>
-        <Route path="/" element={<Home />}/>
+        <Route path="/" element={<Home></Home>}/>
         <Route path="/faq" element={<Faq />} />
         <Route path="/twitch" element={<TwitchStatus></TwitchStatus>}/>
     </Routes>

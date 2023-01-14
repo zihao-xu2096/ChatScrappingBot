@@ -6,3 +6,6 @@
             
         twitch
         youtube
+3. DB Choice
+4. User authentication Choice
+5. Backend Choice

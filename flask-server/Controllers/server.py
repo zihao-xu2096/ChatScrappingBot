@@ -3,6 +3,7 @@ from psycopg2 import connect
 # Global Variables
 app = Flask(__name__)
 
+# Variables
 twitchlink = None  # Global variables to store links, might not need since we have postgresql
 youtubelink = None
 
@@ -32,14 +33,12 @@ def link():
         if request.method == 'POST':
             form_data = request.get_json(force=True)
             twitchlink = form_data
+            print(twitchlink)
             return "Success"
         else:
             return "GET Method called."
     except KeyError as e:
         return "KeyError"
-
-
-print(twitchlink)
 
 
 if __name__ == "__main__":

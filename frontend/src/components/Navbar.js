@@ -20,9 +20,9 @@ export default function NavbarComp() {
             <NavDropdown title="Platforms" id="basic-nav-dropdown">
               <Link className="dropdown-item" to="/twitch">Twitch</Link>
               <Link className="dropdown-item" to="#action/3.2">Youtube</Link>
-              <Link to="#action/3.3">Facebook</Link>
+              <Link className="dropdown-item" to="#action/3.3">Facebook</Link>
               <NavDropdown.Divider />
-              <Link to="#action/3.4">Separate Link</Link>
+              <Link className="dropdown-item" to="#action/3.4">Separate Link</Link>
             </NavDropdown>
             <Link className="nav-link login-btn" to="/login">Login</Link>
           </Nav>

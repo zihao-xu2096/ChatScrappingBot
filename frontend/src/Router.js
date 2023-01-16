@@ -4,6 +4,7 @@ import Faq from "./components/Faq";
 import Home from "./components/Home";
 import TwitchStatus from "./components/TwitchStatus";
 import Login from "./components/Login"
+import Signup from "./components/Signup";
 
 function Routers() {
     return (
@@ -12,6 +13,7 @@ function Routers() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/twitch" element={<TwitchStatus></TwitchStatus>}/>
         <Route path="/login" element={<Login></Login>} />
+        <Route path="/signup" element={<Signup></Signup>}/>
     </Routes>
     )
     }

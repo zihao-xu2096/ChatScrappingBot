@@ -7,5 +7,17 @@
         twitch
         youtube
 3. DB Choice
-4. User authentication Choice
+4.Auth Choice
+    - Auth0
+        --> Too costly
+        --> Social connects cost money
+    - Firebase Auth
+        --> Requiures additional setup & maintenance for DB management 
+    - Supabase
+        --> Built ontop of PostgreSQL
+
 5. Backend Choice
+    - Flask
+        --> Python
+    - Django
+        --> Python

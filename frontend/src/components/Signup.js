@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import './css-styles/Signup.css'
 import { Link } from 'react-router-dom'
 import { createClient } from '@supabase/supabase-js';
-const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjZWd3d3BzdHpscm1pd3Fqd3dmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzM4MDc1OTIsImV4cCI6MTk4OTM4MzU5Mn0.E3YghWEkpguMAq8ML3FbmLseG7oELdURjMRRyCB15LE"
-const supabase = createClient("https://bcegwwpstzlrmiwqjwwf.supabase.co", apiKey) // Instantiated outside of function because it is not dependent on state or props of component
+ // Instantiated outside of function because it is not dependent on state or props of component
 
 export default function Signup() {
     const [formdata, setFormData] = useState({

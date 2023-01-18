@@ -1,16 +1,41 @@
 import React, { useState } from 'react'
 import './css-styles/Signup.css'
 import { Link } from 'react-router-dom'
+import { createClient } from '@supabase/supabase-js';
+const apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJjZWd3d3BzdHpscm1pd3Fqd3dmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzM4MDc1OTIsImV4cCI6MTk4OTM4MzU5Mn0.E3YghWEkpguMAq8ML3FbmLseG7oELdURjMRRyCB15LE"
+const supabase = createClient("https://bcegwwpstzlrmiwqjwwf.supabase.co", apiKey) // Instantiated outside of function because it is not dependent on state or props of component
+
 export default function Signup() {
     const [formdata, setFormData] = useState({
+        name: "",
+        email: "",
         password: "",
         retypepassword: ""
     });
-    const handleCompare = () =>{
+    const handlePassCompare = () =>{
         if (formdata.password != formdata.retypepassword) {
             
             alert('Passwords do not match')
+            return false
         }
+        else {
+            alert('Success')
+            return true
+        }
+    }
+
+    const handleName = (event) => {
+        setFormData({
+            ...formdata,
+            name: event.target.value
+        })
+    }
+
+    const handleEmail = (event) => {
+        setFormData({
+            ...formdata,
+            email: event.target.value
+        })
     }
 
     const handlePassword = (event) =>{
@@ -27,6 +52,20 @@ export default function Signup() {
             retypepassword: event.target.value
         })
     }
+
+    const handleSignup = async (e) => {
+        e.preventDefault();
+        if (handlePassCompare() === true){
+            try {
+                await supabase.auth.signUp({email: formdata.email, password: formdata.password})
+                console.log(handlePassCompare())
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+    }
+
     return (
     <section class="vh-100 bg-image">
         <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -36,25 +75,25 @@ export default function Signup() {
                         <div class="card bg-dark text-white" id="card">
                             <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Create an account</h2>
-                                <form onSubmit={handleCompare}>
+                                <form onSubmit={handleSignup}>
 
                                     <div class="form-outline mb-4">
-                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg"/>
+                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" onChange={handleName} value={formdata.name}/>
                                     <label class="form-label" for="form3Example1cg">Your Name</label>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
+                                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" onChange={handleEmail} value={formdata.email}/>
                                     <label class="form-label" for="form3Example3cg">Your Email</label>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                    <input type="password" id="form3Example4cg" class="form-control form-control-lg" onChange={handlePassword}/>
+                                    <input type="password" id="form3Example4cg" class="form-control form-control-lg" onChange={handlePassword} value={formdata.password}/>
                                     <label class="form-label" for="form3Example4cg">Password</label>
                                     </div>
 
                                     <div class="form-outline mb-4">
-                                    <input type="password" id="form3Example4cdg" class="form-control form-control-lg" onChange={handleRetypePassword}/>
+                                    <input type="password" id="form3Example4cdg" class="form-control form-control-lg" onChange={handleRetypePassword} value={formdata.retypepassword}/>
                                     <label class="form-label" for="form3Example4cdg">Repeat your password</label>
                                     </div>
 
